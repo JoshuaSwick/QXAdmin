@@ -22,7 +22,7 @@ function OrdersShipped({ factory }) {
 
   useEffect(() => {
     axios
-      .get("http://qx.azurewebsites.net/api/rep")
+      .get("https://qstrike.azurewebsites.net/api/reports/orders/ordersshipped")
       .then(result => setData(result.data));
   }, []);
 
@@ -31,17 +31,17 @@ function OrdersShipped({ factory }) {
       {factory}
       <table className="table table-striped">
         <tr>
-          <th>Rep ID</th>
-          <th>User ID</th>
-          <th>First Name</th>
-          <th>Last Name</th>
+          <th>Order ID</th>
+          <th>Part ID</th>
+          <th>Brand</th>
+          <th>Factory</th>
         </tr>
-        {data.map(rep => (
-          <tr key={rep.RepID}>
-            <td>{rep.RepID}</td>
-            <td>{rep.UserID}</td>
-            <td>{rep.FirstName}</td>
-            <td>{rep.LastName}</td>
+        {data.map(orders => (
+          <tr key={orders.OrderID}>
+            <td>{orders.OrderID}</td>
+            <td>{orders.PartID}</td>
+            <td>{orders.BrandName}</td>
+            <td>{orders.FactoryName}</td>
           </tr>
         ))}
       </table>

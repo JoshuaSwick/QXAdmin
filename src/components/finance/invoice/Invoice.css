@@ -1,0 +1,50 @@
+.invoiceLeft {
+  float: left;
+  /* font-size: 75%; */
+  /* font-weight: bold; */
+}
+
+.invoiceRight {
+  float: right;
+  /* font-size: 75%; */
+  /* font-weight: bold; */
+}
+
+.box {
+  float: left;
+  width: 33.33%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.totalsHeader {
+  font-weight: bold;
+}
+/* page */
+/* 
+html {
+  overflow: auto;
+  padding: 0.5in;
+  background: #999;
+  cursor: default;
+}
+
+body {
+  box-sizing: border-box;
+  height: 11in;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 0.5in;
+  width: 8.5in;
+}
+
+body {
+  background: #fff;
+  border-radius: 1px;
+  box-shadow: 0 0 1in -0.25in rgba(0, 0, 0, 0.5);
+} */
